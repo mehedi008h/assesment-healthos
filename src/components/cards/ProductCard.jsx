@@ -1,8 +1,10 @@
 import React from "react";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
+import Rating from "react-rating";
 import { bannerbg1 } from "../../assets/image";
 
-const ProductCard = () => {
+const ProductCard = ({ rating }) => {
     return (
         <div className="border-2 rounded-md p-2 relative">
             {/* img  */}
@@ -19,6 +21,20 @@ const ProductCard = () => {
                 <p className="text-sm text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
+
+                {/* rating for product page */}
+                {rating && (
+                    <div className="mt-2">
+                        <Rating
+                            initialRating={4}
+                            fullSymbol={
+                                <AiFillStar color="#FDBC15" size={22} />
+                            }
+                            emptySymbol={<AiOutlineStar size={22} />}
+                            readonly
+                        />
+                    </div>
+                )}
                 <div className="flex justify-between my-2 items-center">
                     <p className="text-lg font-semibold font-roboto text-green-500">
                         50.0 BDT
@@ -30,7 +46,7 @@ const ProductCard = () => {
             </div>
 
             {/* discount  */}
-            <div className="bg-blue-200 px-3 py-1 rounded-full text-xs absolute top-5 left-5">
+            <div className="bg-blue-200 px-3 py-1 rounded-full text-xs font-semibold absolute top-5 left-5">
                 20 %
             </div>
         </div>
