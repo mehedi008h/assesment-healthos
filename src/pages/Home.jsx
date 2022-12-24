@@ -1,5 +1,6 @@
 import React from "react";
 import Category from "../components/home/Category";
+import Products from "../components/home/Products";
 import Navbar from "../components/navbar/Navbar";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Navbar />
             <Category />
+            <Products />
         </div>
     );
 };

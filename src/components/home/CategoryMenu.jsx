@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
-const CategoryMenu = ({ title, links }) => {
+const CategoryMenu = ({ title, links, buttonText }) => {
     return (
         <div>
             {/* menu title  */}
@@ -17,7 +17,7 @@ const CategoryMenu = ({ title, links }) => {
             </div>
             {/* button  */}
             <button className="px-4 py-2 bg-gray-100 rounded-md mt-8 flex justify-center items-center gap-2">
-                More Category <BsArrowRightShort size={25} />
+                {buttonText} <BsArrowRightShort size={25} />
             </button>
         </div>
     );

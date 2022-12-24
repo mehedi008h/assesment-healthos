@@ -18,7 +18,11 @@ const Category = () => {
             <div className="grid grid-cols-12 gap-4">
                 {/* menu  */}
                 <div className="col-span-2">
-                    <CategoryMenu title="Category Menu" links={categoryLink} />
+                    <CategoryMenu
+                        title="Category Menu"
+                        links={categoryLink}
+                        buttonText="More Category"
+                    />
                 </div>
                 {/* collection banner  */}
                 <div className="col-span-10">
