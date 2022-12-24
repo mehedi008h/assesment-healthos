@@ -1,16 +1,6 @@
 import React from "react";
-import ProductCard from "../cards/ProductCard";
 import CategoryMenu from "./CategoryMenu";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Autoplay, Keyboard, Mousewheel, Navigation } from "swiper";
+import ProductSlider from "../products/ProductSlider";
 
 const categoryLink = [
     "Featured",
@@ -36,53 +26,7 @@ const Products = () => {
                 </div>
                 {/* collection banner  */}
                 <div className="col-span-10">
-                    {/* <div className="grid grid-cols-12 gap-6">
-                        <div className="col-span-4">
-                            <ProductCard />
-                        </div>
-                        <div className="col-span-4">
-                            <ProductCard />
-                        </div>
-                        <div className="col-span-4">
-                            <ProductCard />
-                        </div>
-                    </div> */}
-
-                    <Swiper
-                        slidesPerView={3}
-                        spaceBetween={30}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        navigation={true}
-                        mousewheel={true}
-                        keyboard={true}
-                        modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ProductCard />
-                        </SwiperSlide>
-                    </Swiper>
+                    <ProductSlider view={3} />
                 </div>
             </div>
         </div>

@@ -8,9 +8,9 @@ const ProductCard = ({ rating }) => {
     return (
         <div className="border-2 rounded-md p-2 relative">
             {/* img  */}
-            <div className="w-full h-48 border-2 rounded-md">
+            <div className="w-full h-48 rounded-md">
                 <img
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover rounded-md"
                     src={bannerbg1}
                     alt=""
                 />
