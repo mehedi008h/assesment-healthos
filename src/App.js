@@ -1,10 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Products from "./pages/Products";
-import ProductDetails from "./pages/ProductDetails";
+import {
+    Checkout,
+    Home,
+    Login,
+    ProductDetails,
+    Products,
+    Signup,
+} from "./pages";
 
 function App() {
     return (
@@ -17,6 +20,8 @@ function App() {
                 {/* product */}
                 <Route path="/products" element={<Products />} />
                 <Route path="/product/:id" element={<ProductDetails />} />
+                {/* cart  */}
+                <Route path="/checkout" element={<Checkout />} />
                 {/* admin */}
                 {/* order  */}
             </Routes>

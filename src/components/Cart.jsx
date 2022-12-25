@@ -11,13 +11,12 @@ const Cart = () => {
             <hr className="my-2" />
             {/* cart container  */}
             <div className="my-2 overflow-y-scroll" style={{ height: "76vh" }}>
-                <CartCard />
-                <CartCard />
-                <CartCard />
-                <CartCard />
-                <CartCard />
-                <CartCard />
-                <CartCard />
+                <CartCard order={false} />
+                <CartCard order={false} />
+                <CartCard order={false} />
+                <CartCard order={false} />
+                <CartCard order={false} />
+                <CartCard order={false} />
             </div>
             <hr />
             {/* checkout  */}
