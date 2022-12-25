@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { BiCart, BiUser, BiSearchAlt } from "react-icons/bi";
+import { HiX } from "react-icons/hi";
+import Cart from "../Cart";
+import { Tooltip } from "react-tooltip";
 
 // category data for search
 const categories = [
@@ -20,6 +24,8 @@ const SearchBar = () => {
     // state
     const [category, setCategory] = useState("");
     const [searchInput, setSearchInput] = useState("");
+    // cart open & close
+    const [toggle, setToggle] = useState(false);
 
     console.log("Category :", category);
     console.log("Search Input :", searchInput);
@@ -61,15 +67,41 @@ const SearchBar = () => {
                 >
                     <BiUser size={25} />
                 </Link>
-                <Link
-                    className="h-12 w-12 flex justify-center items-center border-2 rounded-full hover:text-green-500 hover:border-green-300 relative"
-                    to={"/"}
-                >
-                    <BiCart size={25} />
-                    <div className="h-6 w-6 flex justify-center items-center rounded-full bg-amber-500 text-white text-sm font-semibold font-roboto absolute -top-1.5 -right-1.5">
-                        1
-                    </div>
-                </Link>
+                {/* toogle cart view  */}
+                <div className="relative">
+                    <button
+                        className="h-12 w-12 flex justify-center items-center border-2 rounded-full hover:text-green-500 hover:border-green-300 relative"
+                        onClick={() => setToggle(true)}
+                    >
+                        <BiCart size={25} />
+                        <div className="h-6 w-6 flex justify-center items-center rounded-full bg-amber-500 text-white text-sm font-semibold font-roboto absolute -top-1.5 -right-1.5">
+                            1
+                        </div>
+                    </button>
+
+                    {toggle && (
+                        <motion.div
+                            whileInView={{ x: [300, 0] }}
+                            transition={{ duration: 0.85, ease: "easeOut" }}
+                            className="cart_container"
+                        >
+                            <HiX
+                                className="text-red-500"
+                                size={25}
+                                onClick={() => setToggle(false)}
+                                id="btn_close"
+                            />
+                            {/* tooltip  */}
+                            <Tooltip
+                                anchorId="btn_close"
+                                place="top"
+                                content="Close Cart"
+                            />
+                            {/* cart  */}
+                            <Cart />
+                        </motion.div>
+                    )}
+                </div>
             </div>
         </div>
     );

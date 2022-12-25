@@ -69,3 +69,21 @@
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
 }
+
+/* cart  */
+.cart_container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 40%;
+    height: 100vh;
+
+    background-color: #fff;
+    /* top box shadow */
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+}
