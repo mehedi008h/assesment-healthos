@@ -9,6 +9,7 @@ import BillingInfo from "./BillingInfo";
 import OrderSummery from "./OrderSummery";
 import Input from "./forms/Input";
 import PaymentMethod from "./PaymentMethod";
+import PasswordInput from "./forms/PasswordInput";
 
 export {
     Navbar,
@@ -22,4 +23,5 @@ export {
     OrderSummery,
     Input,
     PaymentMethod,
+    PasswordInput,
 };

@@ -21,7 +21,7 @@ const LinkBar = () => {
             <div className="w-11/12 h-12 mx-auto flex justify-center items-center gap-8">
                 {categories.map((link, index) => (
                     <Link
-                        to={"/"}
+                        to={"/products"}
                         key={index}
                         className="font-roboto font-medium hover:text-blue-600 link"
                     >

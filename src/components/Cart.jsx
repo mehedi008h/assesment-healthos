@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowSmRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import CartCard from "./cards/CartCard";
 
 const Cart = () => {
@@ -24,9 +25,12 @@ const Cart = () => {
                 <h3 className="text-xl font-semibold">
                     Total: <span className="text-green-600">5000.00 BDT</span>
                 </h3>
-                <button className="bg-green-500 hover:bg-green-600 transition-all text-white px-2 py-1 rounded-md flex items-center gap-2">
+                <Link
+                    to="/checkout"
+                    className="bg-green-500 hover:bg-green-600 transition-all text-white px-2 py-1 rounded-md flex items-center gap-2"
+                >
                     Checkout <HiArrowSmRight size={25} />
-                </button>
+                </Link>
             </div>
         </div>
     );

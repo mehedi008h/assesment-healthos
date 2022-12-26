@@ -63,7 +63,7 @@ const SearchBar = () => {
             <div className="flex flex-row gap-4">
                 <Link
                     className="h-12 w-12 flex justify-center items-center border-2 rounded-full hover:text-green-500"
-                    to={"/"}
+                    to={"/login"}
                 >
                     <BiUser size={25} />
                 </Link>
