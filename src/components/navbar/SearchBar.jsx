@@ -5,6 +5,7 @@ import { BiCart, BiUser, BiSearchAlt } from "react-icons/bi";
 import { HiX } from "react-icons/hi";
 import Cart from "../Cart";
 import { Tooltip } from "react-tooltip";
+import { logo } from "../../assets/image";
 
 // category data for search
 const categories = [
@@ -32,9 +33,11 @@ const SearchBar = () => {
     return (
         <div className="w-11/12 h-20 mx-auto flex justify-between items-center">
             {/* logo */}
-            <div>
-                <h1 className="text-3xl font-roboto font-bold">Logo</h1>
-            </div>
+            <Link to="/">
+                <div className="w-36 h-16">
+                    <img className="w-full h-full" src={logo} alt="" />
+                </div>
+            </Link>
             {/* search */}
             <div className="flex flex-row  border-2 border-gray-200 rounded-md px-2 py-1">
                 <select

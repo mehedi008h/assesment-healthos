@@ -17,7 +17,7 @@ const Input = ({
                     {label} <span className="text-red-500">*</span>
                 </label>
                 <input
-                    className={`px-2 py-1 outline-none border-2 ${
+                    className={`px-2 py-1 outline-none border-2 bg-white ${
                         errors && touched && "border-red-500"
                     } rounded-md focus:border-green-200 mb-5`}
                     type="text"
@@ -29,7 +29,7 @@ const Input = ({
                 />
             </div>
             {/* If validation is not passed show errors */}
-            <div className="text-red-500 -mt-3">
+            <div className="text-red-500 -mt-3 text-sm">
                 {errors && touched && errors}
             </div>
         </div>

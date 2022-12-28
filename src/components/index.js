@@ -10,6 +10,10 @@ import OrderSummery from "./OrderSummery";
 import Input from "./forms/Input";
 import PaymentMethod from "./PaymentMethod";
 import PasswordInput from "./forms/PasswordInput";
+import Auth from "./Auth";
+// admin
+import Sidebar from "./admin/Sidebar";
+import AdminNavbar from "./admin/AdminNavbar";
 
 export {
     Navbar,
@@ -24,4 +28,7 @@ export {
     Input,
     PaymentMethod,
     PasswordInput,
+    Auth,
+    Sidebar,
+    AdminNavbar,
 };

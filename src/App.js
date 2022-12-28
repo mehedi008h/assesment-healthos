@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
     Checkout,
+    Dashboard,
     Home,
     Login,
     ProductDetails,
@@ -23,6 +24,7 @@ function App() {
                 {/* cart  */}
                 <Route path="/checkout" element={<Checkout />} />
                 {/* admin */}
+                <Route path="/admin" element={<Dashboard />} />
                 {/* order  */}
             </Routes>
         </BrowserRouter>

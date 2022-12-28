@@ -43,7 +43,7 @@ const PasswordInput = ({
                 </div>
             </div>
             {/* If validation is not passed show errors */}
-            <div className="text-red-500 -mt-3">
+            <div className="text-red-500 -mt-3 text-sm">
                 {errors && touched && errors}
             </div>
         </div>
