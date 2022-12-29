@@ -1,15 +1,18 @@
 import React from "react";
 
-const CustomerTable = () => {
+const Table = ({ heads }) => {
     return (
         <div className="my-4 border-2 rounded-md p-2">
             <div className="grid grid-cols-12 gap-2">
                 {/* head  */}
-                <div className="col-span-1 border-r-2 font-semibold">Id</div>
-                <div className="col-span-3 border-r-2 font-semibold">Name</div>
-                <div className="col-span-3 border-r-2 font-semibold">Email</div>
-                <div className="col-span-3 border-r-2 font-semibold">Phone</div>
-                <div className="col-span-2 font-semibold">Action</div>
+                {heads.map((head, i) => (
+                    <div
+                        key={i}
+                        className={`col-span-${head.col} border-r-2 font-semibold`}
+                    >
+                        {head.title}
+                    </div>
+                ))}
                 <hr className="col-span-12" />
                 {/* content  */}
                 <div className="col-span-1">Id</div>
@@ -29,4 +32,4 @@ const CustomerTable = () => {
     );
 };
 
-export default CustomerTable;
+export default Table;

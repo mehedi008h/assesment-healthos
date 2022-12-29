@@ -17,7 +17,7 @@ import AdminNavbar from "./admin/AdminNavbar";
 import Widget from "./cards/Widget";
 import Featured from "./cards/Featured";
 import Chart from "./cards/Chart";
-import CustomerTable from "./admin/CustomerTable";
+import Table from "./admin/Table";
 import CustomerForm from "./forms/CustomerForm";
 export {
     Navbar,
@@ -38,6 +38,6 @@ export {
     Widget,
     Featured,
     Chart,
-    CustomerTable,
+    Table,
     CustomerForm,
 };

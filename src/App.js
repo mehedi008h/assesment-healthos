@@ -2,11 +2,13 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
     AddCustomer,
+    AdminProducts,
     Checkout,
     Customers,
     Dashboard,
     Home,
     Login,
+    Orders,
     ProductDetails,
     Products,
     Signup,
@@ -29,7 +31,8 @@ function App() {
                 <Route path="/admin" element={<Dashboard />} />
                 <Route path="/admin/customers" element={<Customers />} />
                 <Route path="/admin/customer/new" element={<AddCustomer />} />
-                {/* order  */}
+                <Route path="/admin/products" element={<AdminProducts />} />
+                <Route path="/admin/orders" element={<Orders />} />
             </Routes>
         </BrowserRouter>
     );

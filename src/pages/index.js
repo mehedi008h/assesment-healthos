@@ -9,6 +9,8 @@ import Checkout from "./Checkout";
 import Dashboard from "./admin/Dashboard";
 import Customers from "./admin/Customers";
 import AddCustomer from "./admin/AddCustomer";
+import AdminProducts from "./admin/Products";
+import Orders from "./admin/Orders";
 
 export {
     Home,
@@ -20,4 +22,6 @@ export {
     Dashboard,
     Customers,
     AddCustomer,
+    AdminProducts,
+    Orders,
 };

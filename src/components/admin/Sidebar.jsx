@@ -38,13 +38,19 @@ const Sidebar = () => {
                     </div>
                     <div className="flex items-center gap-3 pl-6 py-2 hover:bg-gray-100 transition-all rounded-l-full">
                         <GrList size={22} />
-                        <Link className="text-lg font-medium " to="/admin">
+                        <Link
+                            className="text-lg font-medium "
+                            to="/admin/products"
+                        >
                             Products
                         </Link>
                     </div>
                     <div className="flex items-center gap-3 pl-6 py-2 hover:bg-gray-100 transition-all rounded-l-full">
                         <TbListDetails size={22} />
-                        <Link className="text-lg font-medium " to="/admin">
+                        <Link
+                            className="text-lg font-medium "
+                            to="/admin/orders"
+                        >
                             Orders
                         </Link>
                     </div>
