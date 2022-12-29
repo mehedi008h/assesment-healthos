@@ -29,7 +29,7 @@ const Products = () => {
                         </Link>
                     </div>
                     {/* products  */}
-                    <Table heads={productHeads} />
+                    <Table heads={productHeads} link="product" />
                 </div>
             </div>
         </div>

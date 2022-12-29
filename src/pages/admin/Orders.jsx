@@ -16,7 +16,7 @@ const Orders = () => {
                         <h1 className="text-2xl font-semibold">Order (20)</h1>
                     </div>
                     {/* orders  */}
-                    <Table heads={orderHeads} />
+                    <Table heads={orderHeads} link="order" />
                 </div>
             </div>
         </div>

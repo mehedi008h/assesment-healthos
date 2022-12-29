@@ -10,6 +10,8 @@ import Dashboard from "./admin/Dashboard";
 import Customers from "./admin/Customers";
 import AddCustomer from "./admin/AddCustomer";
 import AdminProducts from "./admin/Products";
+import AddProducts from "./admin/AddProducts";
+import ProductView from "./admin/ProductView";
 import Orders from "./admin/Orders";
 
 export {
@@ -23,5 +25,7 @@ export {
     Customers,
     AddCustomer,
     AdminProducts,
+    AddProducts,
+    ProductView,
     Orders,
 };

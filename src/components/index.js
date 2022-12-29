@@ -19,6 +19,9 @@ import Featured from "./cards/Featured";
 import Chart from "./cards/Chart";
 import Table from "./admin/Table";
 import CustomerForm from "./forms/CustomerForm";
+import ProductForm from "./forms/ProductForm";
+import ImageCard from "./cards/ImageCard";
+
 export {
     Navbar,
     Products,
@@ -40,4 +43,6 @@ export {
     Chart,
     Table,
     CustomerForm,
+    ProductForm,
+    ImageCard,
 };

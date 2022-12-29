@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { bannerbg2 } from "../assets/image";
-import { DetailsCard, Navbar, Review } from "../components";
+import React from "react";
+import { DetailsCard, ImageCard, Navbar, Review } from "../components";
 import ProductSlider from "../components/products/ProductSlider";
 
 const ProductDetails = () => {
-    const [imgIndex, setImgIndex] = useState(0);
-    console.log(imgIndex);
     return (
         <div>
             <Navbar />
@@ -13,21 +10,7 @@ const ProductDetails = () => {
                 <div className="grid grid-cols-12 gap-4">
                     <div className="col-span-6">
                         {/* image  */}
-                        <div className="w-4/5 mx-auto">
-                            <img
-                                className="h-full w-full object-cover rounded-md"
-                                src={bannerbg2}
-                                alt=""
-                            />
-                        </div>
-
-                        {/* image container  */}
-                        <div className="w-4/5 mx-auto flex flex-row flex-wrap mt-4">
-                            <div
-                                className="h-20 w-20 rounded-md bg-gray-500 cursor-pointer"
-                                onClick={() => setImgIndex(1)}
-                            ></div>
-                        </div>
+                        <ImageCard />
                     </div>
                     <div className="col-span-6">
                         {/* info  */}

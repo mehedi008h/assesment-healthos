@@ -12,6 +12,9 @@ const TopNav = () => {
             </div>
             {/* link  */}
             <div className="flex flex-row gap-4 text-green-700 text-sm">
+                <Link className="hover:text-green-500" to={"/admin"}>
+                    Admin
+                </Link>
                 <Link className="hover:text-green-500" to={"/"}>
                     Blog
                 </Link>

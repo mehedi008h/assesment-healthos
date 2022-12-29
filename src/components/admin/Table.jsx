@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Table = ({ heads }) => {
+const Table = ({ heads, link }) => {
     return (
         <div className="my-4 border-2 rounded-md p-2">
             <div className="grid grid-cols-12 gap-2">
@@ -20,9 +21,12 @@ const Table = ({ heads }) => {
                 <div className="col-span-3">Email</div>
                 <div className="col-span-3">Phone</div>
                 <div className="col-span-2">
-                    <button className="border-2 border-green-400 text-green-600 px-2 rounded-md font-semibold">
+                    <Link
+                        to={`/admin/${link}/2`}
+                        className="border-2 border-green-400 text-green-600 px-2 rounded-md font-semibold"
+                    >
                         View
-                    </button>
+                    </Link>
                     <button className="border-2 border-red-400 text-red-600 px-2 rounded-md font-semibold ml-2">
                         Delete
                     </button>

@@ -82,3 +82,27 @@ export const productHeads = [
         title: "Action",
     },
 ];
+
+// product view data
+export const productViewData = [
+    {
+        amount: 5,
+        title: "Total Sell :",
+        type: "pcs",
+    },
+    {
+        amount: 350,
+        title: "Product Price",
+        type: "bdt",
+    },
+    {
+        amount: 1700,
+        title: "Total Earning",
+        type: "bdt",
+    },
+    {
+        amount: 2,
+        title: "Stock",
+        type: "pcs",
+    },
+];

@@ -29,7 +29,7 @@ const Customers = () => {
                         </Link>
                     </div>
                     {/* customers  */}
-                    <Table heads={customerHeads} />
+                    <Table heads={customerHeads} link="customer" />
                 </div>
             </div>
         </div>

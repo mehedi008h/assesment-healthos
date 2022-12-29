@@ -22,6 +22,12 @@ const Sidebar = () => {
                         Dashboard
                     </Link>
                 </div>
+                <div className="flex items-center gap-3 mt-3 pl-6 py-2 hover:bg-gray-100 transition-all rounded-l-full">
+                    <RxDashboard size={22} />
+                    <Link className="text-lg font-medium" to="/">
+                        Home
+                    </Link>
+                </div>
                 {/* lists  */}
                 <h3 className="uppercase text-gray-500 font-semibold pl-6 mt-4">
                     Lists

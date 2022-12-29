@@ -8,7 +8,7 @@ import "react-tooltip/dist/react-tooltip.css";
 const colors = ["red", "green", "gray", "white", "yellow"];
 const sizes = ["S", "M", "L", "XL", "XXL"];
 
-const DetailsCard = () => {
+const DetailsCard = ({ admin }) => {
     return (
         <div>
             <h1 className="text-2xl">Product Title</h1>
@@ -36,6 +36,7 @@ const DetailsCard = () => {
                         <li className="">Category</li>
                         <li className="my-2">Stock</li>
                         <li className="my-2">Seller</li>
+                        {admin && <li className="my-2">Price</li>}
                     </ul>
                 </div>
                 <div className="col-span-4">
@@ -43,6 +44,7 @@ const DetailsCard = () => {
                         <li>Winter Collection</li>
                         <li className="text-green-600 my-2">In Stock</li>
                         <li className="my-2">Easy Fashion</li>
+                        {admin && <li className="my-2">500.00</li>}
                     </ul>
                 </div>
             </div>
@@ -55,7 +57,10 @@ const DetailsCard = () => {
                         <div key={i}>
                             <button
                                 id={color}
-                                className={`bg-${color}-500 h-8 w-8 rounded-full border-2 p-4`}
+                                className="h-8 w-8 rounded-full border-2 p-4"
+                                style={{
+                                    background: `${color}`,
+                                }}
                             ></button>
                             {/* tooltip  */}
                             <Tooltip
@@ -91,30 +96,45 @@ const DetailsCard = () => {
             </div>
 
             {/* price & quantity  */}
-            <div className="border-2 px-3 py-2 rounded-md w-3/4 flex justify-between items-center mt-2">
-                <div>
-                    <h3 className="text-2xl text-green-500 font-semibold">
-                        500.00 BDT
-                    </h3>
-                    <p className="text-gray-500 line-through">550.00</p>
+            {!admin && (
+                <div className="border-2 px-3 py-2 rounded-md w-3/4 flex justify-between items-center mt-2">
+                    <div>
+                        <h3 className="text-2xl text-green-500 font-semibold">
+                            500.00 BDT
+                        </h3>
+                        <p className="text-gray-500 line-through">550.00</p>
+                    </div>
+                    <div className="border-2 px-2 py-1 rounded-md">
+                        <select
+                            className="outline-none text-sm font-semibold"
+                            name=""
+                            id=""
+                        >
+                            <option value="1">Pcs</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    {/* add to cart  */}
+
+                    <div>
+                        <button className="px-2 py-2 bg-green-500 text-white text-sm rounded-md flex justify-center items-center gap-2">
+                            Add to cart <BiCart size={20} />
+                        </button>
+                    </div>
                 </div>
-                <div className="border-2 px-2 py-1 rounded-md">
-                    <select
-                        className="outline-none text-sm font-semibold"
-                        name=""
-                        id=""
-                    >
-                        <option value="1">Pcs</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
-                <div>
-                    <button className="px-2 py-2 bg-green-500 text-white text-sm rounded-md flex justify-center items-center gap-2">
-                        Add to cart <BiCart size={20} />
+            )}
+
+            {admin && (
+                <div className="flex gap-3">
+                    <button className="px-4 py-2 bg-green-500 text-white font-semibold rounded-md">
+                        Update Product
+                    </button>
+                    <button className="px-4 py-2 bg-red-500 text-white font-semibold rounded-md">
+                        Delete Product
                     </button>
                 </div>
-            </div>
+            )}
         </div>
     );
 };
