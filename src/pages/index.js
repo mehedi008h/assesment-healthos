@@ -13,6 +13,7 @@ import AdminProducts from "./admin/Products";
 import AddProducts from "./admin/AddProducts";
 import ProductView from "./admin/ProductView";
 import Orders from "./admin/Orders";
+import OrderView from "./admin/OrderView";
 
 export {
     Home,
@@ -28,4 +29,5 @@ export {
     AddProducts,
     ProductView,
     Orders,
+    OrderView,
 };

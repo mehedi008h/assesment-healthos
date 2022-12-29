@@ -10,6 +10,7 @@ import {
     Home,
     Login,
     Orders,
+    OrderView,
     ProductDetails,
     Products,
     ProductView,
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/admin/product/new" element={<AddProducts />} />
                 <Route path="/admin/product/:id" element={<ProductView />} />
                 <Route path="/admin/orders" element={<Orders />} />
+                <Route path="/admin/order/:id" element={<OrderView />} />
             </Routes>
         </BrowserRouter>
     );

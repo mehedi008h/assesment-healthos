@@ -1,0 +1,27 @@
+.done {
+    color: aqua;
+}
+
+.inProgress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: inProgress 1s ease infinite alternate;
+}
+
+.undone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+/* animation  */
+@keyframes inProgress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

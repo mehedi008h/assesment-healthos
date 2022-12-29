@@ -21,6 +21,8 @@ import Table from "./admin/Table";
 import CustomerForm from "./forms/CustomerForm";
 import ProductForm from "./forms/ProductForm";
 import ImageCard from "./cards/ImageCard";
+import OrderStatus from "./cards/OrderStatus/OrderStatus";
+import OrderInfoCard from "./cards/OrderInfoCard";
 
 export {
     Navbar,
@@ -45,4 +47,6 @@ export {
     CustomerForm,
     ProductForm,
     ImageCard,
+    OrderStatus,
+    OrderInfoCard,
 };

@@ -106,3 +106,43 @@ export const productViewData = [
         type: "pcs",
     },
 ];
+
+// order info
+
+export const shippingInfo = [
+    {
+        title: "Name",
+        info: "Mehedi Hasan",
+    },
+    {
+        title: "Phone",
+        info: "0123455678",
+    },
+    {
+        title: "Email",
+        info: "mehedi@email.com",
+    },
+    {
+        title: "Address",
+        info: "Dhanmondi, Dhaka",
+    },
+];
+
+export const paymentInfo = [
+    {
+        title: "Id",
+        info: "#4543543",
+    },
+    {
+        title: "Payment",
+        info: "Paid",
+    },
+    {
+        title: "Total",
+        info: "1200.50 BDT",
+    },
+    {
+        title: "Status",
+        info: "Processing",
+    },
+];
