@@ -1,5 +1,5 @@
 import React from "react";
-import { AdminNavbar, Sidebar } from "../../components";
+import { AdminNavbar, CustomerForm, Sidebar } from "../../components";
 
 const AddCustomer = () => {
     return (
@@ -10,7 +10,9 @@ const AddCustomer = () => {
                     {/* sidebar  */}
                     <Sidebar />
                 </div>
-                <div className="col-span-10 p-4"></div>
+                <div className="col-span-10 p-4">
+                    <CustomerForm />
+                </div>
             </div>
         </div>
     );
