@@ -83,6 +83,29 @@ export const productHeads = [
     },
 ];
 
+export const userTransationHeads = [
+    {
+        col: 3,
+        title: "Transation Id",
+    },
+    {
+        col: 2,
+        title: "Product Id",
+    },
+    {
+        col: 3,
+        title: "Date",
+    },
+    {
+        col: 2,
+        title: "Price",
+    },
+    {
+        col: 2,
+        title: "Action",
+    },
+];
+
 // product view data
 export const productViewData = [
     {

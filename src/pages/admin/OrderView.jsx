@@ -23,6 +23,7 @@ const OrderView = () => {
                 </div>
                 <div className="col-span-10 p-4">
                     <div className="bg-white w-11/12 mx-auto rounded shadow">
+                        {/* header  */}
                         <div className="flex justify-between items-center p-2 bg-gray-100 rounded-t-md">
                             <h1 className="text-2xl font-semibold">
                                 Order Id : #12323
@@ -40,6 +41,7 @@ const OrderView = () => {
                             </div>
                         </div>
 
+                        {/* info  */}
                         {/* order status  */}
                         <OrderStatus orderStatus="Processing" />
                         <hr className="mt-8 mb-4" />

@@ -23,6 +23,7 @@ import ProductForm from "./forms/ProductForm";
 import ImageCard from "./cards/ImageCard";
 import OrderStatus from "./cards/OrderStatus/OrderStatus";
 import OrderInfoCard from "./cards/OrderInfoCard";
+import CustomerCard from "./cards/CustomerCard";
 
 export {
     Navbar,
@@ -49,4 +50,5 @@ export {
     ImageCard,
     OrderStatus,
     OrderInfoCard,
+    CustomerCard,
 };

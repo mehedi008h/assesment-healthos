@@ -6,6 +6,7 @@ import {
     AdminProducts,
     Checkout,
     Customers,
+    CustomerView,
     Dashboard,
     Home,
     Login,
@@ -32,11 +33,15 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 {/* admin */}
                 <Route path="/admin" element={<Dashboard />} />
+                {/* customer  */}
                 <Route path="/admin/customers" element={<Customers />} />
                 <Route path="/admin/customer/new" element={<AddCustomer />} />
+                <Route path="/admin/customer/:id" element={<CustomerView />} />
+                {/* product  */}
                 <Route path="/admin/products" element={<AdminProducts />} />
                 <Route path="/admin/product/new" element={<AddProducts />} />
                 <Route path="/admin/product/:id" element={<ProductView />} />
+                {/* order  */}
                 <Route path="/admin/orders" element={<Orders />} />
                 <Route path="/admin/order/:id" element={<OrderView />} />
             </Routes>

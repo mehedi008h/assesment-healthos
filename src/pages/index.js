@@ -9,6 +9,7 @@ import Checkout from "./Checkout";
 import Dashboard from "./admin/Dashboard";
 import Customers from "./admin/Customers";
 import AddCustomer from "./admin/AddCustomer";
+import CustomerView from "./admin/CustomerView";
 import AdminProducts from "./admin/Products";
 import AddProducts from "./admin/AddProducts";
 import ProductView from "./admin/ProductView";
@@ -30,4 +31,5 @@ export {
     ProductView,
     Orders,
     OrderView,
+    CustomerView,
 };
