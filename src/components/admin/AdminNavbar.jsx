@@ -20,7 +20,7 @@ const AdminNavbar = () => {
                     {/* search input  */}
                     <div className="border-2 rounded-md px-2 py-1 flex flex-row w-80">
                         <input
-                            className="outline-none w-full"
+                            className="outline-none w-full bg-transparent"
                             type="text"
                             placeholder="Search ..."
                         />

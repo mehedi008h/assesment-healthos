@@ -14,7 +14,9 @@ import Auth from "./Auth";
 // admin
 import Sidebar from "./admin/Sidebar";
 import AdminNavbar from "./admin/AdminNavbar";
-
+import Widget from "./cards/Widget";
+import Featured from "./cards/Featured";
+import Chart from "./cards/Chart";
 export {
     Navbar,
     Products,
@@ -31,4 +33,7 @@ export {
     Auth,
     Sidebar,
     AdminNavbar,
+    Widget,
+    Featured,
+    Chart,
 };
