@@ -1,7 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
+    AddCustomer,
     Checkout,
+    Customers,
     Dashboard,
     Home,
     Login,
@@ -25,6 +27,8 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 {/* admin */}
                 <Route path="/admin" element={<Dashboard />} />
+                <Route path="/admin/customers" element={<Customers />} />
+                <Route path="/admin/customer/new" element={<AddCustomer />} />
                 {/* order  */}
             </Routes>
         </BrowserRouter>

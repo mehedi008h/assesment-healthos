@@ -29,7 +29,10 @@ const Sidebar = () => {
                 <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-3 mt-3 pl-6 py-2 hover:bg-gray-100 transition-all rounded-l-full">
                         <BiUser size={22} />
-                        <Link className="text-lg font-medium " to="/admin">
+                        <Link
+                            className="text-lg font-medium "
+                            to="/admin/customers"
+                        >
                             Customers
                         </Link>
                     </div>
