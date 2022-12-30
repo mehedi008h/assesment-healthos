@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import {
     AddCustomer,
     AddProducts,
@@ -17,10 +18,12 @@ import {
     ProductView,
     Signup,
 } from "./pages";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     return (
         <BrowserRouter>
+            <ToastContainer />
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/* auth */}

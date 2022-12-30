@@ -35,7 +35,7 @@ const ProductSlider = ({ view }) => {
                 ) : (
                     <div>
                         {data?.products.map((product) => (
-                            <SwiperSlide>
+                            <SwiperSlide key={product?._id}>
                                 <ProductCard product={product} />
                             </SwiperSlide>
                         ))}

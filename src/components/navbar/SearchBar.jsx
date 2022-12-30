@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BiCart, BiUser, BiSearchAlt } from "react-icons/bi";
@@ -6,6 +6,8 @@ import { HiX } from "react-icons/hi";
 import Cart from "../Cart";
 import { Tooltip } from "react-tooltip";
 import { logo } from "../../assets/image";
+import { useDispatch, useSelector } from "react-redux";
+import { getTotals } from "../../app/features/cartSlice";
 
 // category data for search
 const categories = [
@@ -28,8 +30,17 @@ const SearchBar = () => {
     // cart open & close
     const [toggle, setToggle] = useState(false);
 
+    const cart = useSelector((state) => state.cart);
+
+    const dispatch = useDispatch();
+
     console.log("Category :", category);
     console.log("Search Input :", searchInput);
+
+    useEffect(() => {
+        dispatch(getTotals());
+    }, [cart, dispatch]);
+
     return (
         <div className="w-11/12 h-20 mx-auto flex justify-between items-center">
             {/* logo */}
@@ -78,7 +89,7 @@ const SearchBar = () => {
                     >
                         <BiCart size={25} />
                         <div className="h-6 w-6 flex justify-center items-center rounded-full bg-amber-500 text-white text-sm font-semibold font-roboto absolute -top-1.5 -right-1.5">
-                            1
+                            {cart?.cartItems.length}
                         </div>
                     </button>
 

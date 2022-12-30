@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import Rating from "react-rating";
+import { useDispatch } from "react-redux";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { addToCart } from "../../app/features/cartSlice";
 
 const DetailsCard = ({ product, admin }) => {
-    const [quantity, setQuantity] = useState(1);
-    console.log("Q:", quantity);
+    const dispatch = useDispatch();
+
+    const handleAddToCart = (item) => {
+        dispatch(addToCart(item));
+    };
     return (
         <div>
             <h1 className="text-2xl">{product?.name}</h1>
@@ -106,25 +111,14 @@ const DetailsCard = ({ product, admin }) => {
                             {product?.price} BDT
                         </h3>
                     </div>
-                    <div className="border-2 px-2 py-1 rounded-md">
-                        <select
-                            className="outline-none text-sm font-semibold"
-                            name="quantity"
-                            id="quantity"
-                            onChange={(e) => setQuantity(e.target.value)}
-                        >
-                            <option value="1">Pcs</option>
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((optionIndex) => (
-                                <option key={optionIndex} value={optionIndex}>
-                                    {optionIndex}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
+
                     {/* add to cart  */}
 
                     <div>
-                        <button className="px-2 py-2 bg-green-500 text-white text-sm rounded-md flex justify-center items-center gap-2">
+                        <button
+                            onClick={() => handleAddToCart(product)}
+                            className="px-2 py-2 bg-green-500 text-white text-sm rounded-md flex justify-center items-center gap-2"
+                        >
                             Add to cart <BiCart size={20} />
                         </button>
                     </div>

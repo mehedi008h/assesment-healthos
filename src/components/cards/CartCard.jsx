@@ -1,25 +1,45 @@
 import React from "react";
 import { HiX } from "react-icons/hi";
-import { bannerbg2 } from "../../assets/image";
+import { useDispatch } from "react-redux";
+import {
+    addToCart,
+    decreaseCart,
+    removeFromCart,
+} from "../../app/features/cartSlice";
 
-const CartCard = ({ order }) => {
+const CartCard = ({ cartItem, order }) => {
+    const dispatch = useDispatch();
+    // remove from cart
+    const handleRemoveFromCart = (item) => {
+        dispatch(removeFromCart(item));
+    };
+
+    // add to cart & incress from cart
+    const handleAddToCart = (item) => {
+        dispatch(addToCart(item));
+    };
+
+    // decrease from cart
+    const handleDecreaseCart = (item) => {
+        dispatch(decreaseCart(item));
+    };
     return (
         <div>
             <div className="w-full flex flex-row gap-3">
                 <div className="w-20 h-20 rounded-md bg-gray-400">
                     <img
                         className="h-full w-full object-cover rounded-md"
-                        src={bannerbg2}
-                        alt=""
+                        src={cartItem?.images[0]?.url}
+                        alt={cartItem?.name}
                     />
                 </div>
                 <div className="w-full">
-                    <h3 className="text-xl">Product Title</h3>
+                    <h3 className="text-xl">{cartItem?.name}</h3>
                     <div className="grid grid-cols-12 gap-3 mt-1">
-                        <div className="col-span-4">
+                        <div className="col-span-3">
                             <p className="text-sm text-gray-400">Price</p>
                             <h5 className="font-medium text-gray-500">
-                                300.00 BDT
+                                {cartItem?.price} BDT
                             </h5>
                         </div>
                         <div className="col-span-2">
@@ -39,9 +59,11 @@ const CartCard = ({ order }) => {
                                         Total
                                     </p>
                                     <h5 className="font-medium text-gray-500">
-                                        300 * 5 =
+                                        {cartItem?.price} *{" "}
+                                        {cartItem?.cartQuantity} =
                                         <span className="text-green-500">
-                                            1500.00
+                                            {cartItem?.price *
+                                                cartItem?.cartQuantity}
                                         </span>
                                     </h5>
                                 </div>
@@ -49,18 +71,39 @@ const CartCard = ({ order }) => {
                         ) : (
                             <>
                                 {/* for cart section  */}
-                                <div className="col-span-2 border-2 px-2 py-1 rounded-md h-fit">
-                                    <select
-                                        className="outline-none"
-                                        name=""
-                                        id=""
-                                    >
-                                        <option value="">Pcs</option>
-                                    </select>
+                                <div className="col-span-3">
+                                    <p className="text-sm text-gray-400">
+                                        Quantity
+                                    </p>
+                                    <div className="flex flex-row gap-3 w-full">
+                                        <button
+                                            onClick={() =>
+                                                handleAddToCart(cartItem)
+                                            }
+                                            className="h-6 w-6 bg-green-500 flex justify-center items-center rounded-full text-white font-semibold"
+                                        >
+                                            +
+                                        </button>
+                                        <div className="font-semibold">
+                                            {cartItem?.cartQuantity}
+                                        </div>
+                                        <button
+                                            onClick={() =>
+                                                handleDecreaseCart(cartItem)
+                                            }
+                                            className="h-6 w-6 bg-red-500 flex justify-center items-center rounded-full text-white font-semibold"
+                                        >
+                                            -
+                                        </button>
+                                    </div>
                                 </div>
+                                {/* delete  */}
                                 <div className="col-span-2">
                                     <HiX
-                                        className="mt-1"
+                                        onClick={() =>
+                                            handleRemoveFromCart(cartItem)
+                                        }
+                                        className="mt-1 cursor-pointer"
                                         color="red"
                                         size={25}
                                     />

@@ -43,19 +43,19 @@ const FilterMenu = ({ title, links, category, brands, rating, price }) => {
                         {links &&
                             links.map((link, index) => (
                                 // brands
-                                <div class="flex items-start">
-                                    <div class="flex h-5 items-center">
+                                <div key={index} className="flex items-start">
+                                    <div className="flex h-5 items-center">
                                         <input
                                             id="brands"
                                             name="brands"
                                             type="checkbox"
-                                            class="h-4 w-4 rounded border-green-300 text-green-600 focus:ring-green-500"
+                                            className="h-4 w-4 rounded border-green-300 text-green-600 focus:ring-green-500"
                                         />
                                     </div>
-                                    <div class="ml-3">
+                                    <div className="ml-3">
                                         <label
-                                            for="brands"
-                                            class="font-medium text-gray-700"
+                                            htmlFor="brands"
+                                            className="font-medium text-gray-700"
                                         >
                                             {link}
                                         </label>
@@ -95,46 +95,6 @@ const FilterMenu = ({ title, links, category, brands, rating, price }) => {
                         <RangeSlider id="range-slider-yellow" />
                     </div>
                 )}
-
-                {/* {links.map((link, index) => (
-                    <div>
-                        {brands ? (
-                            // brands
-                            <div class="flex items-start">
-                                <div class="flex h-5 items-center">
-                                    <input
-                                        id="brands"
-                                        name="brands"
-                                        type="checkbox"
-                                        class="h-4 w-4 rounded border-green-300 text-green-600 focus:ring-green-500"
-                                    />
-                                </div>
-                                <div class="ml-3">
-                                    <label
-                                        for="brands"
-                                        class="font-medium text-gray-700"
-                                    >
-                                        {link}
-                                    </label>
-                                </div>
-                            </div>
-                        ) : (
-                            // category
-                            <div
-                                key={index}
-                                className="w-full flex justify-between items-center"
-                            >
-                                <Link className="hover:text-green-400" to={"/"}>
-                                    {link}
-                                </Link>
-
-                                <div className="px-2 bg-gray-200 rounded-full flex justify-center items-center text-xs text-green-500 font-semibold">
-                                    111
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                ))} */}
             </div>
         </div>
     );
