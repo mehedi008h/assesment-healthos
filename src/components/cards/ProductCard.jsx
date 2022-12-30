@@ -24,7 +24,10 @@ const ProductCard = ({ product, rating }) => {
             </div>
             {/* info */}
             <div className="mt-3">
-                <Link to={`/product/${product?._id}`} className="text-lg">
+                <Link
+                    to={`/product/${product?._id}`}
+                    className="text-lg hover:text-blue-500 transition-all"
+                >
                     {product?.name.substring(0, 25)} ...
                 </Link>
                 <p className="text-sm text-gray-500">

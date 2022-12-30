@@ -1,8 +1,23 @@
-import React from "react";
-import { AdminNavbar, DetailsCard, ImageCard, Sidebar } from "../../components";
+import React, { Fragment } from "react";
+import { useParams } from "react-router-dom";
+import { useSingleProductQuery } from "../../app/service/productServices";
+import {
+    AdminNavbar,
+    DetailsCard,
+    ImageCard,
+    Loading,
+    Sidebar,
+} from "../../components";
 import { productViewData } from "../../data/data";
 
 const ProductView = () => {
+    // fetching parameter
+    const { id } = useParams();
+
+    //fetching product details
+    const { data, isLoading } = useSingleProductQuery({
+        id,
+    });
     return (
         <div className="bg-gray-50">
             <AdminNavbar />
@@ -30,14 +45,23 @@ const ProductView = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="col-span-6">
-                            {/* image  */}
-                            <ImageCard />
-                        </div>
-                        <div className="col-span-6">
-                            {/* info  */}
-                            <DetailsCard admin={true} />
-                        </div>
+                        {isLoading ? (
+                            <Loading />
+                        ) : (
+                            <Fragment>
+                                <div className="col-span-6">
+                                    {/* image  */}
+                                    <ImageCard product={data?.product} />
+                                </div>
+                                <div className="col-span-6">
+                                    {/* info  */}
+                                    <DetailsCard
+                                        product={data?.product}
+                                        admin={true}
+                                    />
+                                </div>
+                            </Fragment>
+                        )}
                     </div>
                 </div>
             </div>

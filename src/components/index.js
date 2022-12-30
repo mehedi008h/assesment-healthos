@@ -19,13 +19,17 @@ import AdminNavbar from "./admin/AdminNavbar";
 import Widget from "./cards/Widget";
 import Featured from "./cards/Featured";
 import Chart from "./cards/Chart";
-import Table from "./admin/Table";
+import ProductTable from "./admin/ProductTable";
 import CustomerForm from "./forms/CustomerForm";
 import ProductForm from "./forms/ProductForm";
 import ImageCard from "./cards/ImageCard";
 import OrderStatus from "./cards/OrderStatus/OrderStatus";
-import OrderInfoCard from "./cards/OrderInfoCard";
+import ShippingInfoCard from "./cards/ShippingInfoCard";
 import CustomerCard from "./cards/CustomerCard";
+import CustomerTable from "./admin/CustomerTable";
+import TransationTable from "./admin/TransationTable";
+import OrderTable from "./admin/OrderTable";
+import PaymentInfoCard from "./cards/PaymentInfoCard";
 
 export {
     Navbar,
@@ -46,12 +50,16 @@ export {
     Widget,
     Featured,
     Chart,
-    Table,
+    ProductTable,
     CustomerForm,
     ProductForm,
     ImageCard,
     OrderStatus,
-    OrderInfoCard,
+    ShippingInfoCard,
     CustomerCard,
     Loading,
+    CustomerTable,
+    TransationTable,
+    OrderTable,
+    PaymentInfoCard,
 };

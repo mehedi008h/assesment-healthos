@@ -62,7 +62,7 @@ export const customerHeads = [
 
 export const productHeads = [
     {
-        col: 1,
+        col: 3,
         title: "Id",
     },
     {
@@ -70,11 +70,11 @@ export const productHeads = [
         title: "Name",
     },
     {
-        col: 3,
+        col: 2,
         title: "Price",
     },
     {
-        col: 3,
+        col: 2,
         title: "Stock",
     },
     {
@@ -174,8 +174,32 @@ export const paymentInfo = [
 export const transations = [
     {
         id: "#74374",
-        productId: "#93847",
+        pId: "#93847",
         date: "11/12/2012",
-        price: "350.00",
+        amount: "3560.00",
+    },
+    {
+        id: "#74365674",
+        pId: "#938343447",
+        date: "14/08/2012",
+        amount: "5350.00",
+    },
+    {
+        id: "#7444374",
+        pId: "#8893847",
+        date: "18/11/2012",
+        amount: "35660.00",
+    },
+    {
+        id: "#89874374",
+        pId: "#12393847",
+        date: "11/12/2022",
+        amount: "37650.00",
+    },
+    {
+        id: "#74374",
+        pId: "#93847",
+        date: "19/02/2021",
+        amount: "77350.00",
     },
 ];
