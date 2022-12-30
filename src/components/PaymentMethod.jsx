@@ -10,7 +10,7 @@ const PaymentMethod = () => {
                 Please enter your payment method
             </p>
             {/* form  */}
-            <div className="pr-12 grid grid-cols-12 gap-2 mt-4 border-2 rounded-md p-3 w-3/4">
+            <div className="pr-12 grid grid-cols-12 gap-2 mt-4 border-2 rounded-md p-3 xl:w-3/4 lg:w-3/4 md:w-3/4 w-full">
                 <div className="col-span-12">
                     <div className="flex flex-row justify-between mb-2">
                         <h3 className="text-xl font-semibold">Credit Card</h3>
@@ -25,7 +25,7 @@ const PaymentMethod = () => {
                         name="cardNumber"
                     />
                 </div>
-                <div className="col-span-5">
+                <div className="xl:col-span-5 lg:col-span-5 md:col-span-5 col-span-12">
                     {/* card holder  */}
                     <Input
                         label="Card Holder"
@@ -46,7 +46,7 @@ const PaymentMethod = () => {
                     <Input label="CVC" placeholder="CVC" name="cvc" />
                 </div>
             </div>
-            <div className="w-3/4 my-4">
+            <div className="xl:w-3/4 lg:w-3/4 md:w-3/4 w-full my-4">
                 {/* paypal  */}
                 <div className="flex justify-between bg-gray-200 px-4 py-2 rounded-md cursor-pointer">
                     <h3>Paypal</h3>

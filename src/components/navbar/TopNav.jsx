@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const TopNav = () => {
     return (
-        <div className="w-11/12 h-10 mx-auto flex justify-between items-center border-b border-gray-100">
+        <div className="w-11/12 h-10 mx-auto xl:flex lg:flex md:flex hidden justify-between items-center border-b border-gray-100">
             {/* info */}
             <div className="flex flex-row gap-4 text-sm">
                 <p className="text-green-700">Chat with us</p>

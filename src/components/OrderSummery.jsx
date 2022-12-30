@@ -7,8 +7,6 @@ const OrderSummery = () => {
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
 
-    console.log("Cart:", cart);
-
     useEffect(() => {
         dispatch(getTotals());
     }, [cart, dispatch]);

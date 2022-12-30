@@ -18,7 +18,7 @@ const categories = [
 const LinkBar = () => {
     return (
         <div className="w-full bg-gray-100">
-            <div className="w-11/12 h-12 mx-auto flex justify-center items-center gap-8">
+            <div className="w-11/12 h-12 mx-auto xl:flex lg:flex md:flex hidden justify-center items-center gap-8">
                 {categories.map((link, index) => (
                     <Link
                         to={"/products"}

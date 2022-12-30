@@ -10,7 +10,11 @@ const CategoryMenu = ({ title, links, buttonText }) => {
             {/* menu list  */}
             <div className="mt-4 w-max flex flex-col gap-2 text-green-500">
                 {links.map((link, index) => (
-                    <Link key={index} className="hover:text-green-400" to={"/"}>
+                    <Link
+                        key={index}
+                        className="hover:text-green-400"
+                        to={"/products"}
+                    >
                         {link}
                     </Link>
                 ))}

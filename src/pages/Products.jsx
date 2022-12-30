@@ -3,7 +3,7 @@ import { useAllProductQuery } from "../app/service/productServices";
 import { Loading, Navbar } from "../components";
 import ProductCard from "../components/cards/ProductCard";
 import FilterMenu from "../components/products/FilterMenu";
-import { categories } from "../data/data";
+import { brands, categories } from "../data/data";
 
 const Products = () => {
     // featch data using redux toolkit query
@@ -15,7 +15,7 @@ const Products = () => {
             <div className="w-11/12 mx-auto my-6">
                 <div className="grid grid-cols-12 gap-4">
                     {/* filter  */}
-                    <div className="col-span-3">
+                    <div className="col-span-3 xl:block lg:block md:block hidden">
                         <div className="flex flex-col gap-4">
                             {/* category */}
                             <FilterMenu
@@ -26,7 +26,7 @@ const Products = () => {
                             {/* brands  */}
                             <FilterMenu
                                 title="Brands"
-                                links={categories}
+                                links={brands}
                                 brands={true}
                             />
                             {/* rating */}
@@ -36,7 +36,7 @@ const Products = () => {
                         </div>
                     </div>
                     {/* product items  */}
-                    <div className="col-span-9">
+                    <div className="xl:col-span-9 lg:col-span-9 md:col-span-9 col-span-12">
                         {isLoading ? (
                             <div>
                                 <Loading />
@@ -46,7 +46,7 @@ const Products = () => {
                                 {data?.products.map((product) => (
                                     <div
                                         key={product?._id}
-                                        className="col-span-4"
+                                        className="xl:col-span-4 lg:col-span-4 md:col-span-4 col-span-12"
                                     >
                                         <ProductCard
                                             product={product}

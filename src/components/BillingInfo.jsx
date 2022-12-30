@@ -8,7 +8,7 @@ const BillingInfo = () => {
             <p className="text-gray-400 mt-1">Please enter your billing info</p>
             {/* form  */}
             <div className="pr-12 grid grid-cols-12 gap-8 mt-4">
-                <div className="col-span-6">
+                <div className="xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12">
                     {/* first name  */}
                     <Input
                         label="First Name"
@@ -30,7 +30,7 @@ const BillingInfo = () => {
                         name="country"
                     />
                 </div>
-                <div className="col-span-6">
+                <div className="xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12">
                     {/* last name  */}
                     <Input
                         label="Last Name"

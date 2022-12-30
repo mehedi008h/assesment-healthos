@@ -22,11 +22,11 @@ const ProductDetails = () => {
                 ) : (
                     <>
                         <div className="grid grid-cols-12 gap-4">
-                            <div className="col-span-6">
+                            <div className="xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12">
                                 {/* image  */}
                                 <ImageCard product={data?.product} />
                             </div>
-                            <div className="col-span-6">
+                            <div className="xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12">
                                 {/* info  */}
                                 <DetailsCard product={data?.product} />
                             </div>
@@ -41,7 +41,13 @@ const ProductDetails = () => {
                                     Seel All
                                 </button>
                             </div>
-                            <ProductSlider view={4} />
+
+                            <div className="xl:block lg:block md:block hidden">
+                                <ProductSlider view={4} />
+                            </div>
+                            <div className="xl:hidden lg:hidden md:hidden block">
+                                <ProductSlider view={1} />
+                            </div>
                         </div>
                         {/* review section  */}
                         <Review product={data?.product} />

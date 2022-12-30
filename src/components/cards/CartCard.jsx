@@ -36,17 +36,17 @@ const CartCard = ({ cartItem, order }) => {
                 <div className="w-full">
                     <h3 className="text-xl">{cartItem?.name}</h3>
                     <div className="grid grid-cols-12 gap-3 mt-1">
-                        <div className="col-span-3">
+                        <div className="xl:col-span-3 lg:col-span-3 md:col-span-3 col-span-6">
                             <p className="text-sm text-gray-400">Price</p>
                             <h5 className="font-medium text-gray-500">
                                 {cartItem?.price} BDT
                             </h5>
                         </div>
-                        <div className="col-span-2">
+                        <div className="xl:col-span-2 lg:col-span-2 md:col-span-2 col-span-6">
                             <p className="text-sm text-gray-400">Color</p>
                             <h5 className="font-medium text-gray-500">Red</h5>
                         </div>
-                        <div className="col-span-2">
+                        <div className="xl:col-span-2 lg:col-span-2 md:col-span-2 col-span-6">
                             <p className="text-sm text-gray-400">Size</p>
                             <h5 className="font-medium text-gray-500">M</h5>
                         </div>
@@ -71,7 +71,7 @@ const CartCard = ({ cartItem, order }) => {
                         ) : (
                             <>
                                 {/* for cart section  */}
-                                <div className="col-span-3">
+                                <div className="xl:col-span-3 lg:col-span-3 md:col-span-3 col-span-6">
                                     <p className="text-sm text-gray-400">
                                         Quantity
                                     </p>

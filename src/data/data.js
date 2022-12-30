@@ -12,6 +12,17 @@ export const categories = [
     "Other",
 ];
 
+export const brands = [
+    "Easy Fashion",
+    "Denim",
+    "Yellow",
+    "Sara",
+    "Gucci",
+    "Noir",
+    "Mansfare",
+    "One Uma Bd",
+];
+
 // table data
 
 export const orderHeads = [

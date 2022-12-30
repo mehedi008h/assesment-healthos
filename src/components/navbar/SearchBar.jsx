@@ -50,7 +50,7 @@ const SearchBar = () => {
                 </div>
             </Link>
             {/* search */}
-            <div className="flex flex-row  border-2 border-gray-200 rounded-md px-2 py-1">
+            <div className="xl:flex lg:flex md:flex hidden flex-row  border-2 border-gray-200 rounded-md px-2 py-1">
                 <select
                     className="outline-none text-sm font-semibold"
                     name="category"
@@ -97,7 +97,7 @@ const SearchBar = () => {
                         <motion.div
                             whileInView={{ x: [300, 0] }}
                             transition={{ duration: 0.85, ease: "easeOut" }}
-                            className="cart_container"
+                            className="cart_container xl:w-2/5 lg:w-2/5 md:w-2/5 w-full"
                         >
                             <HiX
                                 className="text-red-500"

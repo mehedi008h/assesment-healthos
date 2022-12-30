@@ -4,7 +4,7 @@ import Rating from "react-rating";
 
 const ReviewCard = ({ review }) => {
     return (
-        <div className="my-4 w-2/5">
+        <div className="my-4 xl:w-2/5 lg:w-2/5 md:w-2/5 w-full">
             <div className="flex flex-row items-start gap-2">
                 <div className="h-10 w-10 bg-yellow-400 rounded-full">
                     <img src="" alt="" />
