@@ -9,8 +9,12 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Keyboard, Mousewheel, Navigation } from "swiper";
 import ProductCard from "../cards/ProductCard";
+import { useAllProductQuery } from "../../app/service/productServices";
+import Loading from "../cards/Loading";
 
 const ProductSlider = ({ view }) => {
+    // featch data using redux toolkit query
+    const { data, isLoading } = useAllProductQuery();
     return (
         <div>
             <Swiper
@@ -26,27 +30,17 @@ const ProductSlider = ({ view }) => {
                 modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <ProductCard />
-                </SwiperSlide>
+                {isLoading ? (
+                    <Loading />
+                ) : (
+                    <div>
+                        {data?.products.map((product) => (
+                            <SwiperSlide>
+                                <ProductCard product={product} />
+                            </SwiperSlide>
+                        ))}
+                    </div>
+                )}
             </Swiper>
         </div>
     );

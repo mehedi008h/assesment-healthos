@@ -1,6 +1,6 @@
 import React from "react";
 import { useAllProductQuery } from "../app/service/productServices";
-import { Navbar } from "../components";
+import { Loading, Navbar } from "../components";
 import ProductCard from "../components/cards/ProductCard";
 import FilterMenu from "../components/products/FilterMenu";
 import { categories } from "../data/data";
@@ -39,7 +39,7 @@ const Products = () => {
                     <div className="col-span-9">
                         {isLoading ? (
                             <div>
-                                <h1>Loading</h1>
+                                <Loading />
                             </div>
                         ) : (
                             <div className="grid grid-cols-12 gap-6">

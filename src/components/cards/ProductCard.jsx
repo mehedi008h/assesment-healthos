@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product, rating }) => {
     return (
-        <Link to={`/product/${1}`}>
+        <Link to={`/product/${product?._id}`}>
             <div className="border-2 rounded-md p-2 relative">
                 {/* img  */}
                 <div className="w-full h-48 rounded-md">
@@ -19,7 +19,7 @@ const ProductCard = ({ product, rating }) => {
                 {/* info */}
                 <div className="mt-3">
                     <h1 className="text-lg">
-                        {product?.name.substring(0, 30)}
+                        {product?.name.substring(0, 25)} ...
                     </h1>
                     <p className="text-sm text-gray-500">
                         {product?.description.substring(0, 50)}
@@ -51,9 +51,11 @@ const ProductCard = ({ product, rating }) => {
                 </div>
 
                 {/* discount  */}
-                <div className="bg-blue-200 px-3 py-1 rounded-full text-xs font-semibold absolute top-5 left-5">
-                    20 %
-                </div>
+                {product?.discount && (
+                    <div className="bg-blue-200 px-3 py-1 rounded-full text-xs font-semibold absolute top-5 left-5">
+                        {product?.discount} %
+                    </div>
+                )}
             </div>
         </Link>
     );

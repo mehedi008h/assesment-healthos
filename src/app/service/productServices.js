@@ -15,8 +15,8 @@ const productServices = createApi({
             providesTags: ["products"],
         }),
         singleProduct: builder.query({
-            query: ({ productId }) => ({
-                url: `product/${productId}`,
+            query: ({ id }) => ({
+                url: `product/${id}`,
                 method: "GET",
             }),
             providesTags: ["products"],

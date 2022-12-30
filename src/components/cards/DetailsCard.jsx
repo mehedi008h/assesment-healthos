@@ -1,34 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import Rating from "react-rating";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
-const colors = ["red", "green", "gray", "white", "yellow"];
-const sizes = ["S", "M", "L", "XL", "XXL"];
-
-const DetailsCard = ({ admin }) => {
+const DetailsCard = ({ product, admin }) => {
+    const [quantity, setQuantity] = useState(1);
+    console.log("Q:", quantity);
     return (
         <div>
-            <h1 className="text-2xl">Product Title</h1>
+            <h1 className="text-2xl">{product?.name}</h1>
             {/* rating  */}
             <div className="mt-2 flex gap-2">
                 <Rating
-                    initialRating={4}
+                    initialRating={product?.ratings}
                     fullSymbol={<AiFillStar color="#FDBC15" size={20} />}
                     emptySymbol={<AiOutlineStar size={20} />}
                     readonly
                 />
-                <div className="text-gray-500 text-sm">(1 Customer Review)</div>
+                <div className="text-gray-500 text-sm">
+                    ({product?.numOfReviews} Customer Review)
+                </div>
             </div>
             {/* description  */}
-            <p className="my-2 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                veniam nisi labore dignissimos deleniti autem quis voluptatem
-                vitae architecto, quibusdam cum totam officiis beatae in
-                repellat! Saepe asperiores impedit tempora!
-            </p>
+            <p className="my-2 text-gray-600">{product?.description}</p>
 
             <div className="grid grid-cols-12 gap-4 mt-8">
                 <div className="col-span-2">
@@ -41,10 +37,17 @@ const DetailsCard = ({ admin }) => {
                 </div>
                 <div className="col-span-4">
                     <ul className="list-none font-medium">
-                        <li>Winter Collection</li>
-                        <li className="text-green-600 my-2">In Stock</li>
-                        <li className="my-2">Easy Fashion</li>
-                        {admin && <li className="my-2">500.00</li>}
+                        <li>{product?.category}</li>
+                        {product?.stock > 0 ? (
+                            <li className="text-green-600 my-2">
+                                In Stock ({product?.stock})
+                            </li>
+                        ) : (
+                            <li className="text-red-600 my-2">Stock Out</li>
+                        )}
+
+                        <li className="my-2">{product?.seller}</li>
+                        {admin && <li className="my-2">{product?.price}</li>}
                     </ul>
                 </div>
             </div>
@@ -53,20 +56,20 @@ const DetailsCard = ({ admin }) => {
             <div className="my-4">
                 <h3 className="text-xl font-semibold">Colors</h3>
                 <div className="flex flex-row items-center mt-2 gap-4">
-                    {colors.map((color, i) => (
+                    {product?.colors.map((option, i) => (
                         <div key={i}>
                             <button
-                                id={color}
+                                id={option.color}
                                 className="h-8 w-8 rounded-full border-2 p-4"
                                 style={{
-                                    background: `${color}`,
+                                    background: `${option.color}`,
                                 }}
                             ></button>
                             {/* tooltip  */}
                             <Tooltip
-                                anchorId={color}
+                                anchorId={option.color}
                                 place="bottom"
-                                content={color}
+                                content={option.color}
                             />
                         </div>
                     ))}
@@ -76,19 +79,19 @@ const DetailsCard = ({ admin }) => {
             <div className="my-6">
                 <h3 className="text-xl font-semibold">Size</h3>
                 <div className="flex flex-row items-center mt-2 gap-4">
-                    {sizes.map((size, i) => (
+                    {product?.sizes.map((option, i) => (
                         <div key={i}>
                             <button
-                                id={size}
+                                id={option.size}
                                 className="h-8 w-12 rounded-md border-2 p-4 flex justify-center items-center font-semibold"
                             >
-                                {size}
+                                {option.size}
                             </button>
                             {/* tooltip  */}
                             <Tooltip
-                                anchorId={size}
+                                anchorId={option.size}
                                 place="top"
-                                content={size}
+                                content={option.size}
                             />
                         </div>
                     ))}
@@ -100,19 +103,22 @@ const DetailsCard = ({ admin }) => {
                 <div className="border-2 px-3 py-2 rounded-md w-3/4 flex justify-between items-center mt-2">
                     <div>
                         <h3 className="text-2xl text-green-500 font-semibold">
-                            500.00 BDT
+                            {product?.price} BDT
                         </h3>
-                        <p className="text-gray-500 line-through">550.00</p>
                     </div>
                     <div className="border-2 px-2 py-1 rounded-md">
                         <select
                             className="outline-none text-sm font-semibold"
-                            name=""
-                            id=""
+                            name="quantity"
+                            id="quantity"
+                            onChange={(e) => setQuantity(e.target.value)}
                         >
                             <option value="1">Pcs</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((optionIndex) => (
+                                <option key={optionIndex} value={optionIndex}>
+                                    {optionIndex}
+                                </option>
+                            ))}
                         </select>
                     </div>
                     {/* add to cart  */}

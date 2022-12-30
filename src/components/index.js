@@ -11,6 +11,8 @@ import Input from "./forms/Input";
 import PaymentMethod from "./PaymentMethod";
 import PasswordInput from "./forms/PasswordInput";
 import Auth from "./Auth";
+import Loading from "./cards/Loading";
+
 // admin
 import Sidebar from "./admin/Sidebar";
 import AdminNavbar from "./admin/AdminNavbar";
@@ -51,4 +53,5 @@ export {
     OrderStatus,
     OrderInfoCard,
     CustomerCard,
+    Loading,
 };
