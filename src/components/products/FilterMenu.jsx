@@ -24,7 +24,7 @@ const FilterMenu = ({ title, links, category, brands, rating, price }) => {
                                 >
                                     <Link
                                         className="hover:text-green-400 font-medium"
-                                        to={"/"}
+                                        to={"/products"}
                                     >
                                         {link}
                                     </Link>
