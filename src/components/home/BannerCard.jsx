@@ -1,5 +1,6 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const BannerCard = ({ img, title }) => {
     return (
@@ -20,10 +21,13 @@ const BannerCard = ({ img, title }) => {
                         {title}
                     </h1>
                 </div>
-                <button className="px-4 py-1 border-2 border-green-600 rounded-md flex items-center gap-2 w-max text-base font-roboto">
+                <Link
+                    to="/products"
+                    className="px-4 py-1 border-2 border-green-600 rounded-md flex items-center gap-2 w-max text-base font-roboto"
+                >
                     Shop Now
                     <BsArrowRightShort className="text-green-500" size={25} />
-                </button>
+                </Link>
             </div>
         </div>
     );
