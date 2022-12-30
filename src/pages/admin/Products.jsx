@@ -18,7 +18,7 @@ const Products = () => {
                             Products (20)
                         </h1>
                         <Link
-                            to={"/admin/products/new"}
+                            to={"/admin/product/new"}
                             className="px-3 py-1 rounded-md font-semibold"
                             style={{
                                 backgroundColor: "rgba(0, 128, 0, 0.2)",

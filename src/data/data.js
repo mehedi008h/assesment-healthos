@@ -85,11 +85,11 @@ export const productHeads = [
 
 export const userTransationHeads = [
     {
-        col: 3,
-        title: "Transation Id",
+        col: 1,
+        title: "Id",
     },
     {
-        col: 2,
+        col: 3,
         title: "Product Id",
     },
     {
@@ -97,7 +97,7 @@ export const userTransationHeads = [
         title: "Date",
     },
     {
-        col: 2,
+        col: 3,
         title: "Price",
     },
     {
@@ -167,5 +167,15 @@ export const paymentInfo = [
     {
         title: "Status",
         info: "Processing",
+    },
+];
+
+// transation data
+export const transations = [
+    {
+        id: "#74374",
+        productId: "#93847",
+        date: "11/12/2012",
+        price: "350.00",
     },
 ];

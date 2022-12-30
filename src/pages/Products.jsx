@@ -1,10 +1,14 @@
 import React from "react";
+import { useAllProductQuery } from "../app/service/productServices";
 import { Navbar } from "../components";
 import ProductCard from "../components/cards/ProductCard";
 import FilterMenu from "../components/products/FilterMenu";
 import { categories } from "../data/data";
 
 const Products = () => {
+    // featch data using redux toolkit query
+    const { data, isLoading } = useAllProductQuery();
+
     return (
         <div>
             <Navbar />
@@ -33,23 +37,25 @@ const Products = () => {
                     </div>
                     {/* product items  */}
                     <div className="col-span-9">
-                        <div className="grid grid-cols-12 gap-6">
-                            <div className="col-span-4">
-                                <ProductCard rating={true} />
+                        {isLoading ? (
+                            <div>
+                                <h1>Loading</h1>
                             </div>
-                            <div className="col-span-4">
-                                <ProductCard rating={true} />
+                        ) : (
+                            <div className="grid grid-cols-12 gap-6">
+                                {data?.products.map((product) => (
+                                    <div
+                                        key={product?._id}
+                                        className="col-span-4"
+                                    >
+                                        <ProductCard
+                                            product={product}
+                                            rating={true}
+                                        />
+                                    </div>
+                                ))}
                             </div>
-                            <div className="col-span-4">
-                                <ProductCard rating={true} />
-                            </div>
-                            <div className="col-span-4">
-                                <ProductCard rating={true} />
-                            </div>
-                            <div className="col-span-4">
-                                <ProductCard rating={true} />
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>

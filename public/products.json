@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Black Mens Palm Burgundy Jacket",
+        "price": "2099",
+        "description": "Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).",
+        "ratings": 4.5,
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/mehedi08h/image/upload/v1671727926/products/WD_NY-Black-Mens-Palm-Burgundy-Jacket01-600x764_hmaypk.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/mehedi08h/image/upload/v1671727927/products/WD_NY-Black-Mens-Palm-Burgundy-Jacket02-600x764_xcorwx.jpg"
+            }
+        ],
+        "category": "Mens",
+        "seller": "Easy Fashion",
+        "colors": [
+            { "color": "red" },
+            { "color": "green" },
+            { "color": "yellow" },
+            { "color": "pink" },
+            { "color": "black" }
+        ],
+        "sizes": [
+            { "size": "S" },
+            { "size": "M" },
+            { "size": "L" },
+            { "size": "XL" },
+            { "size": "XXL" }
+        ],
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": [
+            {
+                "name": "Mehedi Hasan",
+                "rating": 4.5,
+                "comment": "Good quality product"
+            },
+            {
+                "name": "Kamrul Islam",
+                "rating": 4.0,
+                "comment": "Qualityfull product"
+            }
+        ]
+    },
+    {
+        "name": "Mens Standard Fit Short Sleeve V Neck T Shirt",
+        "price": "560",
+        "description": "Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).",
+        "ratings": 4,
+        "images": [
+            {
+                "url": "https://res.cloudinary.com/mehedi08h/image/upload/v1671727926/products/Mens-Standard-Fit-Short-Sleeve-V-Neck-T-Shirt03-1-600x764_jnrbn6.jpg"
+            },
+            {
+                "url": "https://res.cloudinary.com/mehedi08h/image/upload/v1671727926/products/Mens-Standard-Fit-Short-Sleeve-V-Neck-T-Shirt02-1-600x764_wwtovj.jpg"
+            }
+        ],
+        "category": "Mens",
+        "seller": "Easy Fashion",
+        "colors": [
+            { "color": "red" },
+            { "color": "green" },
+            { "color": "yellow" },
+            { "color": "pink" },
+            { "color": "black" }
+        ],
+        "sizes": [
+            { "size": "S" },
+            { "size": "M" },
+            { "size": "L" },
+            { "size": "XL" },
+            { "size": "XXL" }
+        ],
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": [
+            {
+                "name": "Mehedi Hasan",
+                "rating": 4.5,
+                "comment": "Good quality product"
+            },
+            {
+                "name": "Kamrul Islam",
+                "rating": 4.0,
+                "comment": "Qualityfull product"
+            }
+        ]
+    }
+]

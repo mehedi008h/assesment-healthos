@@ -4,8 +4,10 @@ import {
     Chart,
     Featured,
     Sidebar,
+    Table,
     Widget,
 } from "../../components";
+import { userTransationHeads } from "../../data/data";
 
 const widgets = ["user", "order", "earning", "balance"];
 
@@ -36,6 +38,14 @@ const Dashboard = () => {
                                 title="Last 12 Months (Revenue)"
                                 aspect={3 / 1}
                             />
+                        </div>
+
+                        {/* transation  */}
+                        <div className="col-span-12 bg-white p-2 rounded-md shadow">
+                            <h1 className="text-lg font-semibold text-gray-500">
+                                Recent Transation
+                            </h1>
+                            <Table heads={userTransationHeads} link="order" />
                         </div>
                     </div>
                 </div>
